@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a Poem for You</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .input-container {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .poem-container {
+            margin-top: 20px;
+            display: block;
+            max-width: 100%;
+            padding: 20px;
+            border: none;
+            border-radius: 4px;
+            overflow: auto;
+            word-wrap: break-word;
+            min-height: auto;
+            visibility: hidden; /* Hide initially */
+            background-size: 200%; /* Scale the background image to twice its original size */
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .poem-line {
+            margin: 5px;
+            font-size: 18px;
+            padding: 5px 10px;
+            display: block;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-container">
+        <input type="text" id="keywordInput" placeholder="Enter a keyword, e.g., rain, city">
+        <button id="generateBtn">Generate Poem</button>
+    </div>
+    <div id="poemContainer" class="poem-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
